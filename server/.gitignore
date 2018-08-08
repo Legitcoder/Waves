@@ -1,0 +1,5 @@
+mongo-password.txt
+mongo-user.txt
+node_modules
+node-mongodb-redis-data
+.DS_Store

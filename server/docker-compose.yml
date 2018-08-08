@@ -1,0 +1,39 @@
+version: "3.1"
+
+services: 
+  node:
+    build: ./
+    volumes: 
+      - ".:/usr/src/server"
+    environment:
+      - NODE_ENV=development
+    ports:
+      - "8080:8080"
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME_FILE: /run/secrets/mongo-user
+      MONGO_INITDB_ROOT_PASSWORD_FILE: /run/secrets/mongo-password
+    secrets:
+      - mongo-user
+      - mongo-password
+    volumes:
+      - "mongo-data:/data/db"
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+    volumes: 
+      - "redis-data:/data"
+      
+volumes:
+  mongo-data:
+  redis-data:
+
+
+secrets:
+  mongo-user:
+    file: ./mongo-user.txt
+  mongo-password:
+    file: ./mongo-password.txt
