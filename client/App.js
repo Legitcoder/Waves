@@ -3,6 +3,6 @@ import React, { Component } from 'react';
 
 export default class App extends Component {
     render() {
-        return <h1 className="dummy">sup </h1>
+        return <h1 className="container">sup </h1>
     }
 }

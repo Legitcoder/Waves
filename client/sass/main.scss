@@ -1,5 +1,14 @@
-.dummy {
-    display: flex;
-    background-color: orange;
-    justify-content: flex-start;
-}
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+@import "base/utilities";
+
+
+@import "layout/grid";
+@import "layout/navigation";
+
+
+//Don't forget to import components as you're creating them
