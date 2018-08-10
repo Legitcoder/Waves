@@ -3,3 +3,4 @@ mongo-user.txt
 node_modules
 node-mongodb-redis-data
 .DS_Store
+.env
