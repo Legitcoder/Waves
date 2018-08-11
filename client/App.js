@@ -1,8 +1,19 @@
 import React, { Component } from 'react';
+import { Route, Switch } from 'react-router';
+import Artists from './components/Artists';
 
 
-export default class App extends Component {
+class App extends Component {
     render() {
-        return <h1 className="container">sup </h1>
+        return(
+            <div className="container">
+                <Switch> 
+                    <Route exact path="/" component={Artists} exact />
+                    <Route exact path="/artists" component={Artists} exact />
+                </Switch>
+            </div>
+        )
     }
 }
+
+export default App;
