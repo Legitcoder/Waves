@@ -8,7 +8,6 @@ const ArtistSchema = new Schema({
     },
     imagePath: {
         type: String,
-        required: true,
     },
     albums: [{
         type: Schema.Types.ObjectId, 

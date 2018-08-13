@@ -8,11 +8,11 @@ const SongSchema = Schema({
     },
     imagePath: {
         type: String,
-        required: true
+        //required: true
     },
     audioPath: {
         type: String,
-        required: true
+        //required: true
     },
     album: {
         type: Schema.Types.ObjectId,
